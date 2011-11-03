@@ -1,0 +1,17 @@
+colorscheme desert
+syntax on
+set ruler
+set autoindent smartindent
+set smarttab
+
+" Highlight things that we find with the search
+set hlsearch
+
+" Set off the other parens
+highlight MatchParen ctermbg=4
+
+" Show matching brackets
+set showmatch
+
+" Remove Toolbar
+set guioptions-=T
