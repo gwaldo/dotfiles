@@ -1,33 +1,17 @@
 Adding apps to the LXDE App menu:
-http://wiki.lxde.org/en/LXDE:Questions#Simply_add_an_application
-
-If all you wish to do is add an application to the provided menus you do not need to edit the menu files. Simply create a .desktop file as above and save it to "~/.local/share/applications". You may have to create this directory.
-
-Eg.:
-vi ~/.local/share/applications/idea.desktop
-
-Example .desktop file:
-[Desktop Entry]
-Type=Application
-Icon=/home/jeremy/dev/tools/idea/idea-IU-95.627/bin/idea128.png
-Name=Intellij Idea
-Comment=Java Ide
-Categories=Utility;Development
-Exec=/home/jeremy/bin/idea.sh %U
-StartupNotify=true
-Terminal=false
-The Categories property tells LDXE which menus the item should appear in.
+http://wiki.lxde.org/en/Main_Menu
 
 
-Except this didn't work...:
+
+Such as this arduino.desktop placed in /usr/share/applications/
 
 [Desktop Entry]
 Type=Application
 Icon=/opt/arduino-1.0/reference/img/logo.png
 Name=Arduino
 Comment=Arduino IDE
-Categories=Programming
-Exec=/opt/arduion-1.0/arduino
-StartupNotify=true
+Categories=Application;Development;
+Exec=/opt/arduino-1.0/arduino
+StartupNotify=false
 Terminal=false
 
