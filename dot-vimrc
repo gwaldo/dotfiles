@@ -1,4 +1,4 @@
-# ~/.vimrc
+" ~/.vimrc
 colorscheme desert
 syntax on
 set ruler
