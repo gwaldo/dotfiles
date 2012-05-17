@@ -6,6 +6,9 @@
 # Yet somehow they missed "Program Files"...
 # #facepalm
 
+# In order for the profile to work, you must change the PowerShell Execution Policy
+# > Set-ExecutionPolicy Unrestricted [[-Scope] {Process | CurrentUser | LocalMachine | UserPolicy | MachinePolicy}]
+
 Set-Alias npp 'C:\Program Files (x86)\Notepad++\notepad++.exe'
 Set-Alias python3 'C:\Python32\python.exe'
 Set-Alias py3 'C:\Python32\python.exe'
