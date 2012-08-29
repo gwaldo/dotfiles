@@ -15,7 +15,7 @@ Set-Alias py3 'C:\Python32\python.exe'
 Set-Alias python2 'C:\Python27\python.exe'
 Set-Alias py2 'C:\Python27\python.exe'
 Set-Alias which get-command
-Set-Alias knife "%HOMEPATH%\.chef/knife.rb"
+#Set-Alias knife 'C:\Program Files (x86)\opscode\chef\bin\knife -c C:\Users\waldo\.chef\knife.rb'
 
 function mkcd {
 	Param($directory)
