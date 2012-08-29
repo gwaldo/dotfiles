@@ -16,6 +16,7 @@ Set-Alias python2 'C:\Python27\python.exe'
 Set-Alias py2 'C:\Python27\python.exe'
 Set-Alias which get-command
 #Set-Alias knife 'C:\Program Files (x86)\opscode\chef\bin\knife -c C:\Users\waldo\.chef\knife.rb'
+Set-Alias mvim gvim
 
 function mkcd {
 	Param($directory)
