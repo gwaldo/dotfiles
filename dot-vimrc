@@ -16,3 +16,9 @@ set showmatch
 
 " Remove Toolbar
 set guioptions-=T
+
+" Do not wrap long lines
+set nowrap
+
+" Line Numbers
+set nu
