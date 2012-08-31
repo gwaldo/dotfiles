@@ -26,3 +26,6 @@ set nu
 " Tab Stops
 set tabstop=4
 set shiftwidth=4
+
+" Make backspace work properly
+set backspace=indent,eol,start
