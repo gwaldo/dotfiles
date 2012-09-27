@@ -17,6 +17,7 @@ Set-Alias py2 'C:\Python27\python.exe'
 Set-Alias which get-command
 #Set-Alias knife 'C:\Program Files (x86)\opscode\chef\bin\knife -c C:\Users\waldo\.chef\knife.rb'
 Set-Alias mvim gvim
+#Set-Alias Get-MailboxStats 'Get-Wmiobject -namespace root\MicrosoftExchangeV2 -class Exchange_Mailbox -computer ernstsbs.ernstinfo.local | sort-object -desc MailboxDisplayName | select-object MailboxDisplayName,Size,TotalItems,LastLogonTime'
 
 function mkcd {
 	Param($directory)
