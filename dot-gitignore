@@ -1,0 +1,10 @@
+# Things git should ignore globally
+# belongs at ~/.gitignore
+# then run `git config --global core.excludesfile ~/.gitignore`
+
+# vim temp files
+*~
+*.swp
+*.swo
+
+#
