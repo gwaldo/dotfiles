@@ -18,6 +18,7 @@ Set-Alias which get-command
 #Set-Alias knife 'C:\Program Files (x86)\opscode\chef\bin\knife -c C:\Users\waldo\.chef\knife.rb'
 Set-Alias mvim gvim
 #Set-Alias Get-MailboxStats 'Get-Wmiobject -namespace root\MicrosoftExchangeV2 -class Exchange_Mailbox -computer ernstsbs.ernstinfo.local | sort-object -desc MailboxDisplayName | select-object MailboxDisplayName,Size,TotalItems,LastLogonTime'
+Set-Alias subl 'C:\Program Files\Sublime Text 2\sublime_text.exe'
 
 function mkcd {
 	Param($directory)
