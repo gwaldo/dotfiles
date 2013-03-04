@@ -1,0 +1,8 @@
+# belongs at ~/.irbrc
+
+# and then in irb:
+#	> copy [1,2,3,4]
+# "[1, 2, 3, 4]" is now in your clipboard.
+def copy(*args) IO.popen('pbcopy', 'r+')
+	{ |clipboard| clipboard.puts args.map(&:inspect) };
+end
