@@ -1,3 +1,6 @@
 # belongs in .bashrc or .bash_profile
 
 mkcd() { mkdir -p "$@" && cd "$_"; }
+
+alias ffs='sudo !!'
+alias FFS='sudo !!'
