@@ -21,6 +21,7 @@ Set-Alias mvim gvim
 Set-Alias subl 'C:\Program Files\Sublime Text 2\sublime_text.exe'
 Set-Alias pc 'perl -d -e 1'
 Set-Alias scp 'pscp'
+Set-Alias uptime 'cscript //nologo ~\bin\uptime.vbs'
 
 function mkcd {
 	Param($directory)
