@@ -1,6 +1,18 @@
 # belongs in .bashrc or .bash_profile
+# I know I have more customizations than this... Check the Mac
 
-mkcd() { mkdir -p "$@" && cd "$_"; }
+
 
 alias ffs='sudo !!'
 alias FFS='sudo !!'
+
+###FUNCTIONS
+mkcd() { mkdir -p "$@" && cd "$_"; }
+
+
+###TAB COMPLETIONS
+# Homebrew (mac)
+# Add a test for OS 
+# if (`uname -something` == Mac){
+source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+#} fi #or whatever
