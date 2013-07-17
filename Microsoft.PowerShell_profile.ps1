@@ -29,6 +29,17 @@ function mkcd {
 	cd $directory
 }
 
+# from http://superuser.com/a/362156/64094
+# Test, improve, etc
+# also, one-lined as:
+#	(new-object System.Net.WebClient).DownloadFile( '$url, $path )
+# function wget {
+#	Param( $url, $localpath )
+#	$client = new-object System.Net.WebClient
+#	$client.Downloadfile( $url, $localpath )
+#
+
+
 # less
 # grep
 # touch
