@@ -33,6 +33,8 @@ function mkcd {
 # Test, improve, etc
 # also, one-lined as:
 #	(new-object System.Net.WebClient).DownloadFile( '$url, $path )
+# also, PowerShell v3 adds the `invoke-webrequest` cmdlet:
+#	`Invoke-WebRequest http://www.google.com/ -OutFile c:\google.html`
 # function wget {
 #	Param( $url, $localpath )
 #	$client = new-object System.Net.WebClient
