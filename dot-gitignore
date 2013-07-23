@@ -2,6 +2,9 @@
 # belongs at ~/.gitignore
 # then run `git config --global core.excludesfile ~/.gitignore`
 
+# Mac finder positional file
+.DS_Store
+
 # vim temp files
 *~
 *.swp
