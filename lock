@@ -1,0 +1,4 @@
+# Lock the Mac Desktop
+# copy into ~/bin, and ensure that that is in $PATH
+
+/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend &
