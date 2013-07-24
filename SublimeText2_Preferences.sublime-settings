@@ -1,0 +1,9 @@
+// ~/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings
+{
+	"color_scheme": "Packages/Color Scheme - Default/Pastels on Dark.tmTheme",
+	"highlight_modified_tabs": true,
+	"remember_open_files": true,
+
+	// Columns in which to display veritcal rulers
+	"rulers": [80]
+}
