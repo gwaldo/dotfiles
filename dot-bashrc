@@ -1,18 +1,43 @@
 # belongs in .bashrc or .bash_profile
-# I know I have more customizations than this... Check the Mac
+
+export EDITOR=/usr/bin/vim
+
+export CLICOLOR=1
+# from http://stackoverflow.com/questions/973899/how-to-configure-mac-terminal-to-have-color-ls-output
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx  #for a dark background
+#export LSCOLORS=ExFxCxDxBxegedabagacad	#for a light background
+
+# Fixing my bash prompt to not be stupid
+# http://beckism.com/2009/02/better_bash_prompt/
+# default is "\h:\W \u\$", which is lame
+# A better one is export PS1="\u@\h:\W \$", which gives me the user@host:path, but still needs color
+export PS1="\n\u@\[\e[32m\]\h\[\e[0m\]:\W ---(\[\e[0m\]\d, \t\[\e[0m\])---\n\$"
 
 
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+
+### PATH
+export PATH=/Users/waldo/bin:$PATH:/Users/waldo/bin/mongodb-osx-x86_64-2.2.3/bin
+# Adding ipython3 & co to PATH
+export PATH=/usr/local/share/python3:$PATH
+
+PATH=/usr/local/bin:$PATH
+export PATH
+
+
+### ALIASES
 alias ffs='sudo !!'
 alias FFS='sudo !!'
 
-###FUNCTIONS
-mkcd() { mkdir -p "$@" && cd "$_"; }
 
-
-###TAB COMPLETIONS
+### TAB COMPLETIONS
 # Homebrew (mac)
 # Add a test for OS 
 # if (`uname -something` == Mac){
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 #} fi #or whatever
+
+
+### FUNCTIONS
+mkcd() { mkdir -p "$@" && cd "$_"; }
