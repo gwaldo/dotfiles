@@ -18,12 +18,9 @@ export PS1="\n\u@\[\e[32m\]\h\[\e[0m\]:\W ---(\[\e[0m\]\d, \t\[\e[0m\])---\n\$"
 
 
 ### PATH
-export PATH=/Users/waldo/bin:$PATH:/Users/waldo/bin/mongodb-osx-x86_64-2.2.3/bin
-# Adding ipython3 & co to PATH
-export PATH=/usr/local/share/python3:$PATH
-
-PATH=/usr/local/bin:$PATH
-export PATH
+export PATH=/Users/waldo/bin:/usr/local/bin:$PATH:/Users/waldo/bin/mongodb-osx-x86_64-2.2.3/bin
+# Adding ipython3 & friends to PATH
+export PATH=$PATH:/usr/local/share/python3
 
 
 ### ALIASES
