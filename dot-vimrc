@@ -21,7 +21,7 @@ set guioptions-=T
 set nowrap
 
 " Line Numbers
-set nu
+set number
 
 " Tab Stops
 set tabstop=4
