@@ -1,9 +1,18 @@
 // ~/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings
+// Settings in here override those in "Default/Preferences.sublime-settings", and
+// are overridden in turn by file type specific settings.
+
 {
 	"color_scheme": "Packages/Color Scheme - Default/Pastels on Dark.tmTheme",
 	"highlight_modified_tabs": true,
 	"remember_open_files": true,
 
 	// Columns in which to display veritcal rulers
-	"rulers": [80]
+	"rulers": [80, 100],
+
+	// Set to false to disable scrolling past the end of the buffer.
+	// On OS X, this value is overridden in the platform specific settings, so
+	// you'll need to place this line in your user settings to override it.
+	"scroll_past_end": true
+	
 }
