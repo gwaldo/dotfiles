@@ -51,7 +51,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-# Oh-My-ZSH goes above here
 #export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 ### PATH
 export PATH=/Users/waldo/bin:/usr/local/bin:$PATH:/Users/waldo/bin/mongodb-osx-x86_64-2.4.5/bin
@@ -60,3 +59,12 @@ export PATH=$PATH:/usr/local/share/python3
 
 ### FUNCTIONS
 mkcd() { mkdir -p "$@" && cd "$_"; }
+
+### Mac cursor commands for iTerm2; map ctrl+arrows or alt+arrows to fast-move
+# for ctrl+arrows:
+#"\e[1;5D": backward-word
+#"\e[1;5C": forward-word
+# for alt+arrows:
+bindkey -e
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
