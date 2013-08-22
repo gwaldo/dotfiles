@@ -38,3 +38,5 @@ source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
 ### FUNCTIONS
 mkcd() { mkdir -p "$@" && cd "$_"; }
+
+fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
