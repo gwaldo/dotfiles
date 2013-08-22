@@ -60,6 +60,8 @@ export PATH=$PATH:/usr/local/share/python3
 ### FUNCTIONS
 mkcd() { mkdir -p "$@" && cd "$_"; }
 
+fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
+
 ### Mac cursor commands for iTerm2; map ctrl+arrows or alt+arrows to fast-move
 # for ctrl+arrows:
 #"\e[1;5D": backward-word
