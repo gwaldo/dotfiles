@@ -58,7 +58,10 @@ export PATH=/Users/waldo/bin:/usr/local/bin:$PATH:/Users/waldo/bin/mongodb-osx-x
 export PATH=$PATH:/usr/local/share/python3:/usr/local/opt/ruby/bin
 
 ### FUNCTIONS
+## mkcd = create a directory and `cd` into it
 mkcd() { mkdir -p "$@" && cd "$_"; }
+## chefsum = do a sha256 checksum on a file. So named because sha256 checksums is what Chef uses.
+chefsum() { openssl dgst -sha256 "$@"; }
 
 fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
 
