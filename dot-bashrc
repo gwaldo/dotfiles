@@ -26,6 +26,7 @@ export PATH=$PATH:/usr/local/share/python3:/usr/local/opt/ruby/bin
 ### ALIASES
 alias ffs='sudo !!'
 alias FFS='sudo !!'
+alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
 
 
 ### TAB COMPLETIONS
