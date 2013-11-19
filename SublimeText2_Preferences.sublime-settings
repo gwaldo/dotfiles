@@ -19,6 +19,9 @@
 	// you'll need to place this line in your user settings to override it.
 	"show_full_path": true,
 
+	// Set to "none" to turn off drawing white space, "selection" to draw only the
+	// white space within the selection, and "all" to draw all white space
+	"draw_white_space": "all",
 	
 
 
