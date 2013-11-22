@@ -29,3 +29,6 @@ set shiftwidth=4
 
 " Make backspace work properly
 set backspace=indent,eol,start
+
+" Semicolon isn't really useful. Map it to Colon & save having to hit Shift, too
+nnoremap ; :
