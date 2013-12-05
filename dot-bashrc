@@ -23,13 +23,6 @@ export PATH=/Users/waldo/bin:/usr/local/bin:$PATH:/Users/waldo/bin/mongodb-osx-x
 export PATH=$PATH:/usr/local/share/python3:/usr/local/opt/ruby/bin
 
 
-### ALIASES
-alias ffs='sudo !!'
-alias FFS='sudo !!'
-alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
-alias runningvms='VboxManage list runningvms'
-
-
 ### TAB COMPLETIONS
 # Homebrew (mac)
 # Add a test for OS 
@@ -45,3 +38,13 @@ mkcd() { mkdir -p "$@" && cd "$_"; }
 chefsum() { openssl dgst -sha256 "$@"; }
 
 fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
+
+
+### ALIASES
+alias ffs='sudo !!'
+alias FFS='sudo !!'
+alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
+alias runningvms='VboxManage list runningvms'
+alias flipdesk='fliptable'
+alias deskflip='fliptable'
+alias tableflip='fliptable'
