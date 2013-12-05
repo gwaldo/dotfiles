@@ -57,9 +57,6 @@ export PATH=/Users/waldo/bin:/usr/local/bin:$PATH:/Users/waldo/bin/mongodb-osx-x
 # Adding ipython3 & friends to PATH
 export PATH=$PATH:/usr/local/share/python3:/usr/local/opt/ruby/bin
 
-### ALIASES
-alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
-alias runningvms='VboxManage list runningvms'
 
 ### FUNCTIONS
 ## mkcd = create a directory and `cd` into it
@@ -68,6 +65,15 @@ mkcd() { mkdir -p "$@" && cd "$_"; }
 chefsum() { openssl dgst -sha256 "$@"; }
 
 fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
+
+
+### ALIASES
+alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
+alias runningvms='VboxManage list runningvms'
+alias flipdesk='fliptable'
+alias deskflip='fliptable'
+alias tableflip='fliptable'
+
 
 ### Mac cursor commands for iTerm2; map ctrl+arrows or alt+arrows to fast-move
 # for ctrl+arrows:
