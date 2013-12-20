@@ -1,5 +1,8 @@
 " ~/.vimrc
-colorscheme desert
+"colorscheme desert
+"colorscheme delek
+colorscheme torte
+"colorscheme slate
 syntax on
 set ruler
 set autoindent smartindent
@@ -22,6 +25,12 @@ set nowrap
 
 " Line Numbers
 set number
+
+" Highlight current line
+set cursorline
+
+" Highlight current column
+"set cursorcolumn
 
 " Tab Stops
 set tabstop=4
