@@ -36,7 +36,7 @@ ZSH_THEME="gianu"
 DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
@@ -55,17 +55,18 @@ source $ZSH/oh-my-zsh.sh
 ### PATH
 export PATH=/Users/waldo/bin:/usr/local/bin:$PATH:/Users/waldo/bin/mongodb-osx-x86_64-2.4.5/bin
 # Adding ipython3 & friends to PATH
-export PATH=$PATH:/usr/local/share/python3:/usr/local/opt/ruby/bin
+export PATH=$PATH:/usr/local/share/python3
+# Adding a Ruby & gems to PATH
+export PATH=$PATH:/usr/local/opt/ruby/bin
 
+export EDITOR='vim'
 
 ### FUNCTIONS
 ## mkcd = create a directory and `cd` into it
 mkcd() { mkdir -p "$@" && cd "$_"; }
 ## chefsum = do a sha256 checksum on a file. So named because sha256 checksums is what Chef uses.
 chefsum() { openssl dgst -sha256 "$@"; }
-
 fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
-
 
 ### ALIASES
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
@@ -73,7 +74,6 @@ alias runningvms='VboxManage list runningvms'
 alias flipdesk='fliptable'
 alias deskflip='fliptable'
 alias tableflip='fliptable'
-
 
 ### Mac cursor commands for iTerm2; map ctrl+arrows or alt+arrows to fast-move
 # for ctrl+arrows:
