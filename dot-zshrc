@@ -67,6 +67,11 @@ mkcd() { mkdir -p "$@" && cd "$_"; }
 ## chefsum = do a sha256 checksum on a file. So named because sha256 checksums is what Chef uses.
 chefsum() { openssl dgst -sha256 "$@"; }
 fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
+function fuck() {
+	if killall -9 "$2"; then
+		echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
+	fi
+}
 
 ### ALIASES
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
@@ -83,3 +88,11 @@ alias tableflip='fliptable'
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
+
+# Report the execution time if it is longer than N seconds:
+REPORTTIME=0
+
+# Adding date ZSH
+preexec() { 
+	date
+}
