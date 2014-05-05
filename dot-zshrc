@@ -90,7 +90,7 @@ bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
 
 # Report the execution time if it is longer than N seconds:
-REPORTTIME=0
+REPORTTIME=1
 
 # Adding date ZSH
 preexec() { 
