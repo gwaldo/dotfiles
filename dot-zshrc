@@ -72,6 +72,14 @@ function fuck() {
 		echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
 	fi
 }
+happydance() {
+	echo ";D=-<\n"
+	echo ";D|-<\n"
+	echo ";D\-<\n"
+	echo ";D|-<\n"
+	echo ";D/-<\n"
+	echo ";D|-<\n"
+}
 
 ### ALIASES
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
