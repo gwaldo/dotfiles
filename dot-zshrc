@@ -87,6 +87,7 @@ alias runningvms='VboxManage list runningvms'
 alias flipdesk='fliptable'
 alias deskflip='fliptable'
 alias tableflip='fliptable'
+alias cls='clear'
 
 ### Mac cursor commands for iTerm2; map ctrl+arrows or alt+arrows to fast-move
 # for ctrl+arrows:
