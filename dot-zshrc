@@ -94,5 +94,5 @@ REPORTTIME=0
 
 # Adding date ZSH
 preexec() { 
-	date
+    echo $fg[black]`date`
 }
