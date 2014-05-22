@@ -41,3 +41,5 @@ set backspace=indent,eol,start
 
 " Semicolon isn't really useful. Map it to Colon & save having to hit Shift, too
 nnoremap ; :
+
+filetype plugin indent on
