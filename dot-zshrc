@@ -102,6 +102,7 @@ bindkey '^[[1;9D' backward-word
 REPORTTIME=1
 
 # Adding date ZSH
-preexec() { 
-    echo $fg[black]`date`
+preexec() {
+    echo "$fg[black]`date`$reset_color"
+	echo
 }
