@@ -3,3 +3,15 @@ dotfiles
 Nothing revolutionary, or likely even interesting, here.
 
 Just to store my config files...
+
+
+TODO:
+-Deploy Script
+-Include curlbashed apps (Homebrew, Chef)
+-Put files in places
+
+vim golang syntax:
+-brew install go
+-cd `which go`; up a level.
+-cp misc/vim/syntax/go.vim ~/.vim/syntax/ && _
+-cp misc/vim/ftdetect/gofiletype.vim ~/.vim/ftdetect/go.vim
