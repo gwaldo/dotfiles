@@ -58,6 +58,9 @@ export PATH=/Users/waldo/bin:/usr/local/bin:$PATH:/Users/waldo/bin/mongodb-osx-x
 export PATH=$PATH:/usr/local/share/python3
 # Adding a Ruby & gems to PATH
 export PATH=$PATH:/usr/local/opt/ruby/bin
+# Adding Go's $GOPATH/bin to PATH
+export GOPATH=$HOME/Dropbox/code/gocode
+export PATH=$PATH:$GOPATH/bin
 
 export EDITOR='vim'
 
