@@ -60,7 +60,8 @@ export PATH=$PATH:/usr/local/share/python3
 export PATH=$PATH:/usr/local/opt/ruby/bin
 # Adding Go's $GOPATH/bin to PATH
 export GOPATH=$HOME/Dropbox/code/gocode
-export PATH=$PATH:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
 export EDITOR='vim'
 
