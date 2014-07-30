@@ -97,6 +97,7 @@ alias deskflip='fliptable'
 alias tableflip='fliptable'
 alias cls='clear'
 alias diff='colordiff'
+alias prettyprint='python -m json.tool'
 
 ### Mac cursor commands for iTerm2; map ctrl+arrows or alt+arrows to fast-move
 # for ctrl+arrows:
