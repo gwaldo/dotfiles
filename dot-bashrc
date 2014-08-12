@@ -41,10 +41,13 @@ fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example us
 
 
 ### ALIASES
-alias ffs='sudo !!'
-alias FFS='sudo !!'
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
 alias runningvms='VboxManage list runningvms'
 alias flipdesk='fliptable'
 alias deskflip='fliptable'
 alias tableflip='fliptable'
+alias cls='clear'
+alias diff='colordiff'
+alias prettyprint='python -m json.tool'
+### TYPO ALIASES
+alias cleawr='clear'
