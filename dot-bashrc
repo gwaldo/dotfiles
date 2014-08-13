@@ -1,6 +1,6 @@
 # belongs in .bashrc or .bash_profile
 
-export EDITOR=/usr/bin/vim
+export EDITOR='vim'
 
 export CLICOLOR=1
 # from http://stackoverflow.com/questions/973899/how-to-configure-mac-terminal-to-have-color-ls-output
