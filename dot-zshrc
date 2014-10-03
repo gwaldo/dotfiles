@@ -101,6 +101,11 @@ alias tableflip='fliptable'
 alias cls='clear'
 alias diff='colordiff'
 alias prettyprint='python -m json.tool'
+alias vssh='vagrant ssh $1'
+alias vsssh='vagrant ssh $1'
+alias vstatus='vagrant status'
+alias vnuke='vagrant destroy -f'
+alias vcycle='vagrant destroy -f && vagrant up'
 ### TYPO ALIASES
 alias cleawr='clear'
 
