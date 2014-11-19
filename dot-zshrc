@@ -88,6 +88,19 @@ happydance() {
 	echo ";D/-<\n"
 	echo ";D|-<\n"
 }
+disco() {
+	echo "(•_•)"
+	echo "<)   )╯"
+	echo " /    \"
+	echo ""
+	echo "\(•_•)"
+	echo " (   (>"
+	echo " /    \"
+	echo ""
+	echo " (•_•)"
+	echo "<)   )>"
+	echo " /    \"
+}
 monocle() {
 	echo "ಠ_ರೃ\n"
 }
