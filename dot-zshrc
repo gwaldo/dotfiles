@@ -91,15 +91,15 @@ happydance() {
 disco() {
 	echo "(•_•)"
 	echo "<)   )╯"
-	echo " /    \"
+	echo " /    \ "
 	echo ""
 	echo "\(•_•)"
 	echo " (   (>"
-	echo " /    \"
+	echo " /    \ "
 	echo ""
 	echo " (•_•)"
 	echo "<)   )>"
-	echo " /    \"
+	echo " /    \ "
 }
 monocle() {
 	echo "ಠ_ರೃ\n"
