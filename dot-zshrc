@@ -155,6 +155,9 @@ alias cleawr='clear'
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
+bindkey '\e\e[D' backward-word
+bindkey '\e\e[C' forward-word
+
 
 # Report the execution time if it is longer than N seconds:
 REPORTTIME=1
