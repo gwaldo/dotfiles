@@ -66,6 +66,10 @@ export PATH=$PATH:$GOBIN
 # Python envvars which should help Sphinx work
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+# Postgresql
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+fi
 
 export EDITOR='vim'
 
