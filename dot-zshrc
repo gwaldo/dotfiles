@@ -166,6 +166,9 @@ bindkey '\e\e[C' forward-word
 # Report the execution time if it is longer than N seconds:
 REPORTTIME=1
 
+# List TMUX sessions, if any
+tmux list-sessions 2> /dev/null
+
 # Adding date ZSH
 preexec() { 
 	echo "$fg[black]`date`$reset_color"

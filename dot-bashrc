@@ -54,6 +54,8 @@ monocle() {
 	echo "ಠ_ರೃ\n"
 }
 
+# List TMUX sessions, if any
+tmux list-sessions 2> /dev/null
 
 ### ALIASES
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
