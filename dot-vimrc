@@ -43,3 +43,6 @@ set backspace=indent,eol,start
 nnoremap ; :
 
 filetype plugin indent on
+
+" Clear last search term
+map <F3> :let @/ = ""<CR>
