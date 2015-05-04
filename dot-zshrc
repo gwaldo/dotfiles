@@ -116,6 +116,9 @@ snow() {
 csiyeah() {
 	echo "(•_•) , ( •_•)>⌐■-■ , (⌐■_■)"
 }
+shrug() {
+	echo "¯\_(ツ)_/¯"
+}
 lint() {
 	if [ $1 ]; then
 		target=$1
