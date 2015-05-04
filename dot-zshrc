@@ -76,15 +76,39 @@ fi
 export EDITOR='vim'
 
 ### FUNCTIONS
-## mkcd = create a directory and `cd` into it
+# # mkcd = create a directory and `cd` into it
 mkcd() { mkdir -p "$@" && cd "$_"; }
-## chefsum = do a sha256 checksum on a file. So named because sha256 checksums is what Chef uses.
+# # chefsum = do a sha256 checksum on a file. So named because sha256 checksums is what Chef uses.
 chefsum() { openssl dgst -sha256 "$@"; }
-fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
 function fuck() {
 	if killall -9 "$2"; then
 		echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
 	fi
+}
+lint() {
+	if [ $1 ]; then
+		target=$1
+	else
+		target="."
+	fi
+	if [ `which rubocop` ]; then
+		echo "Running RuboCop";
+		rubocop $target;
+	else
+		echo "\nWARNING: RuboCop is not installed\n";
+	fi
+	if [ `which foodcritic` ]; then
+		echo "\nRunning Foodcritic\n";
+		foodcritic $target;
+	else
+		echo "\nWARNING: FoodCritic is not installed\n";
+	fi
+}
+
+
+### BS FUNCTIONS
+snow() {
+	clear;while :;do echo $LINES $COLUMNS $(($RANDOM%$COLUMNS));sleep 0.1;done|gawk '{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH*\033[0;0H",a[x],x;}}'
 }
 happydance() {
 	echo ";D=-<\n"
@@ -107,37 +131,10 @@ disco() {
 	echo "<)   )>"
 	echo " /    \ "
 }
-monocle() {
-	echo "ಠ_ರೃ\n"
-}
-snow() {
-	clear;while :;do echo $LINES $COLUMNS $(($RANDOM%$COLUMNS));sleep 0.1;done|gawk '{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH*\033[0;0H",a[x],x;}}'
-}
-csiyeah() {
-	echo "(•_•) , ( •_•)>⌐■-■ , (⌐■_■)"
-}
-shrug() {
-	echo "¯\_(ツ)_/¯"
-}
-lint() {
-	if [ $1 ]; then
-		target=$1
-	else
-		target="."
-	fi
-	if [ `which rubocop` ]; then
-		echo "Running RuboCop";
-		rubocop $target;
-	else
-		echo "\nWARNING: RuboCop is not installed\n";
-	fi
-	if [ `which foodcritic` ]; then
-		echo "\nRunning Foodcritic\n";
-		foodcritic $target;
-	else
-		echo "\nWARNING: FoodCritic is not installed\n";
-	fi
-}
+fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
+monocle() { echo "ಠ_ರೃ\n"; }
+csiyeah() { echo "(•_•) , ( •_•)>⌐■-■ , (⌐■_■)"; }
+shrug() { echo "¯\_(ツ)_/¯"; }
 
 ### ALIASES
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
