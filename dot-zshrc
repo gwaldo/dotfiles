@@ -150,6 +150,7 @@ alias vsssh='vagrant ssh $1'
 alias vstatus='vagrant status'
 alias vnuke='vagrant destroy -f'
 alias vcycle='vagrant destroy -f && vagrant up'
+alias updatethese='for i in `ls`; do cd $i; git pull; cd ..; done'
 ### TYPO ALIASES
 alias cleawr='clear'
 
