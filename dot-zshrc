@@ -104,6 +104,9 @@ lint() {
 		echo "\nWARNING: FoodCritic is not installed\n";
 	fi
 }
+dockerip() {
+	boot2docker ip 2> /dev/null;
+}
 
 
 ### BS FUNCTIONS
@@ -150,7 +153,7 @@ alias vsssh='vagrant ssh $1'
 alias vstatus='vagrant status'
 alias vnuke='vagrant destroy -f'
 alias vcycle='vagrant destroy -f && vagrant up'
-alias updatethese='for i in `ls`; do cd $i; git pull; cd ..; done'
+alias updatethese='for i in `ls`; do echo "\n$i"; cd $i; git pull; cd ..; done'
 alias bd='boot2docker $1'
 ### TYPO ALIASES
 alias cleawr='clear'
