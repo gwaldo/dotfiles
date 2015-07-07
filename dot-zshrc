@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 #export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 ### PATH
-export PATH=/Users/waldo/bin:/usr/local/bin:$PATH:/Users/waldo/bin/mongodb-osx-x86_64-2.4.5/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/bin/mongodb-osx-x86_64-2.4.5/bin
 # Adding ipython3 & friends to PATH
 export PATH=$PATH:/usr/local/share/python3
 # Adding ChefDK gems to the PATH
