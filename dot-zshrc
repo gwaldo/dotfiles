@@ -75,6 +75,10 @@ fi
 
 export EDITOR='vim'
 
+if [[ `grep disney /etc/resolv.conf` ]]; then
+    source $HOME/.bash_chef;
+fi
+
 ### FUNCTIONS
 # # mkcd = create a directory and `cd` into it
 mkcd() { mkdir -p "$@" && cd "$_"; }
