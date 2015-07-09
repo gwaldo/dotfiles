@@ -77,6 +77,7 @@ export EDITOR='vim'
 
 if [[ `grep disney /etc/resolv.conf` ]]; then
     source $HOME/.bash_chef;
+    source $HOME/.aws;
 fi
 
 ### FUNCTIONS
