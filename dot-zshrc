@@ -75,9 +75,11 @@ fi
 
 export EDITOR='vim'
 
+### If Work...
 if [[ `grep disney /etc/resolv.conf` ]]; then
     source $HOME/.bash_chef;
     source $HOME/.aws;
+    alias block='knife block $@'
 fi
 
 ### FUNCTIONS
