@@ -114,7 +114,12 @@ lint() {
 dockerip() {
 	boot2docker ip 2> /dev/null;
 }
-
+editlaunchers() {
+	atom ~/Dropbox/Code/Launchers;
+}
+editdotfiles() {
+	atom ~/Dropbox/Code/dotfiles;
+}
 
 ### BS FUNCTIONS
 snow() {
