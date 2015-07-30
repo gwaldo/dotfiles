@@ -167,6 +167,7 @@ alias vnuke='vagrant destroy -f'
 alias vcycle='vagrant destroy -f && vagrant up'
 alias updatethese='for i in `ls`; do echo "\n$i"; cd $i; git pull; cd ..; done'
 alias bd='boot2docker $1'
+alias b2d='boot2docker $1'
 ### TYPO ALIASES
 alias cleawr='clear'
 
