@@ -75,6 +75,13 @@ fi
 
 export EDITOR='vim'
 
+### If Work...
+if [[ `grep disney /etc/resolv.conf` ]]; then
+	source $HOME/.bash_chef;
+	source $HOME/.aws;
+	alias block='knife block $@'
+fi
+
 ### FUNCTIONS
 # # mkcd = create a directory and `cd` into it
 mkcd() { mkdir -p "$@" && cd "$_"; }
@@ -104,8 +111,21 @@ lint() {
 		echo "\nWARNING: FoodCritic is not installed\n";
 	fi
 }
+function bd() {
+	boot2docker $*
+	#[[ "$1" == "up" ]] && eval "$(boot2docker shellinit)"
+	if [[ "$1" == "up" ]]; then
+		eval "$(boot2docker shellinit)";
+	fi
+}
 dockerip() {
 	boot2docker ip 2> /dev/null;
+}
+editlaunchers() {
+	atom ~/Dropbox/Code/Launchers;
+}
+editdotfiles() {
+	atom ~/Dropbox/Code/dotfiles;
 }
 
 
@@ -154,7 +174,12 @@ alias vstatus='vagrant status'
 alias vnuke='vagrant destroy -f'
 alias vcycle='vagrant destroy -f && vagrant up'
 alias updatethese='for i in `ls`; do echo "\n$i"; cd $i; git pull; cd ..; done'
-alias bd='boot2docker $1'
+alias fetchupstream='for i in `ls`; do echo "\n$i"; cd $i; git fetch upstream && git checkout master && git merge upstream/master && git push; cd ..; done'
+alias forkandclone=''
+#alias bd='boot2docker $@;'
+alias b2d='boot2docker $@;'
+alias bdup='boot2docker up && eval "$(boot2docker shellinit)";'
+
 ### TYPO ALIASES
 alias cleawr='clear'
 
@@ -181,3 +206,4 @@ preexec() {
 	echo "$fg[black]`date`$reset_color"
 	echo
 }
+
