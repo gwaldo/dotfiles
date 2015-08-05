@@ -92,6 +92,11 @@ function fuck() {
 		echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
 	fi
 }
+function iloop()
+{
+# Make this a function
+#while sleep 2; do echo thinking; done
+}
 lint() {
 	if [ $1 ]; then
 		target=$1
