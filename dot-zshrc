@@ -95,7 +95,7 @@ function fuck() {
 function iloop()
 {
 # Make this a function
-#while sleep 2; do echo thinking; done
+#	#while sleep 2; do echo && echo thinking; echo ; done
 }
 lint() {
 	if [ $1 ]; then
