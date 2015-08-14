@@ -93,6 +93,11 @@ function fuck() {
 		echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
 	fi
 }
+function iloop()
+{
+# Make this a function
+#	#while sleep 2; do echo && echo thinking; echo ; done
+}
 lint() {
 	if [ $1 ]; then
 		target=$1
@@ -128,7 +133,6 @@ editlaunchers() {
 editdotfiles() {
 	atom ~/Dropbox/Code/dotfiles;
 }
-
 
 ### BS FUNCTIONS
 snow() {
@@ -203,8 +207,7 @@ REPORTTIME=1
 tmux list-sessions 2> /dev/null
 
 # Adding date ZSH
-preexec() { 
+preexec() {
 	echo "$fg[black]`date`$reset_color"
 	echo
 }
-
