@@ -133,6 +133,12 @@ editlaunchers() {
 editdotfiles() {
 	atom ~/Dropbox/Code/dotfiles;
 }
+function subl () {
+    if [ -d /Applications/Sublime\ Text\ 2.app ]
+    then
+        open /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl $@
+    fi
+}
 
 ### BS FUNCTIONS
 snow() {
