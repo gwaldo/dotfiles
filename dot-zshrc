@@ -127,17 +127,20 @@ function bd() {
 dockerip() {
 	boot2docker ip 2> /dev/null;
 }
-editlaunchers() {
-	atom ~/Dropbox/Code/Launchers;
-}
-editdotfiles() {
-	atom ~/Dropbox/Code/dotfiles;
-}
 function subl () {
+	#TODO: wrap in OS detection
     if [ -d /Applications/Sublime\ Text\ 2.app ]
     then
         /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl $@
+		else
+			echo "Sublime Text doesn't seem to be installed"
     fi
+}
+editlaunchers() {
+	subl ~/Dropbox/Code/Launchers;
+}
+editdotfiles() {
+	subl ~/Dropbox/Code/dotfiles;
 }
 
 ### BS FUNCTIONS
