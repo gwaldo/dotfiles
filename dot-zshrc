@@ -176,6 +176,9 @@ function ughprint() {
 	echo "Print is Dead: https://youtu.be/D3v_ogRaTf4?t=10s"
 	echo "Ugh, Hardcopy: https://www.youtube.com/watch?v=K3zkqjpQF8U"
 }
+function fixit() {
+	echo "https://www.youtube.com/watch?v=1Isjgc0oX0s"
+}
 
 ### ALIASES
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
