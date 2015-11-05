@@ -179,6 +179,9 @@ function ughprint() {
 function fixit() {
 	echo "https://www.youtube.com/watch?v=1Isjgc0oX0s"
 }
+function rip_psx(){
+	echo 'dd if=/dev/disk4 of="./Disk Title disk2.img" bs=2048; say done'
+}
 
 ### ALIASES
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
