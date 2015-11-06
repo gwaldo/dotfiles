@@ -172,6 +172,20 @@ fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example us
 monocle() { echo "ಠ_ರೃ\n"; }
 csiyeah() { echo "(•_•) , ( •_•)>⌐■-■ , (⌐■_■)"; }
 shrug() { echo "¯\_(ツ)_/¯"; }
+function rageflip() {
+	echo;
+	echo -n "( º_º）  ┬─┬   "; sleep .2;
+	echo -n "";
+	echo -n " ( º_º） ┬─┬   "; sleep .2;
+	echo -n "";
+	echo -n "  ( ºДº）┬─┬   "; sleep .2;
+	echo -n "";
+	echo -n "  (╯'Д'）╯︵⊏   "; sleep .1;
+	echo -n "";
+	echo -n "  (╯'□'）╯︵ ⊏  "; sleep .1;
+	echo -n "";
+	echo -n "  (╯°□°）╯︵ ┻━┻  "; sleep .1;
+}
 function ughprint() {
 	echo "Print is Dead: https://youtu.be/D3v_ogRaTf4?t=10s"
 	echo "Ugh, Hardcopy: https://www.youtube.com/watch?v=K3zkqjpQF8U"
