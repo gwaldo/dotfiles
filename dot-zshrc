@@ -80,6 +80,8 @@ if [[ `grep disney /etc/resolv.conf` ]]; then
 	source $HOME/.bash_chef;
 	source $HOME/.aws;
 	source $HOME/.work;
+	source $HOME/.dockerrc;
+	alias spork='knife spork $@'
 	alias block='knife block $@'
 fi
 
