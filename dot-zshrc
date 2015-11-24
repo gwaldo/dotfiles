@@ -72,6 +72,8 @@ export LANG=en_US.UTF-8
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 fi
+# Dropbox bin
+export PATH=$PATH:$HOME/Dropbox/bin
 
 export EDITOR='vim'
 
