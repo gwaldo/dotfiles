@@ -146,6 +146,10 @@ editlaunchers() {
 editdotfiles() {
 	subl ~/Dropbox/Code/dotfiles;
 }
+tunnel() {
+	echo "ssh -L 9909:192.168.1.1:80 home"
+	echo "# Connections to tcp localhost:9909 will be made to 192.168.1.1:80 via SSH tunnel to home"
+}
 
 ### BS FUNCTIONS
 snow() {
