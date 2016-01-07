@@ -151,6 +151,14 @@ tunnel() {
 	echo "# Connections to tcp localhost:9909 will be made to 192.168.1.1:80 via SSH tunnel to home"
 }
 
+# Useful for converting between Graphite metrics and file paths
+function dottoslash() {
+	echo $1 | sed 's/\./\//g'
+}
+function slashtodot() {
+	echo $1 | sed 's/\//\./g'
+}
+
 ### BS FUNCTIONS
 snow() {
 	clear;while :;do echo $LINES $COLUMNS $(($RANDOM%$COLUMNS));sleep 0.1;done|gawk '{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH*\033[0;0H",a[x],x;}}'
