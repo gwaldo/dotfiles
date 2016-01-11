@@ -78,7 +78,7 @@ export PATH=$PATH:$HOME/Dropbox/bin
 export EDITOR='vim'
 
 ### If Work...
-if [[ `grep disney /etc/resolv.conf` ]]; then
+if [[ `egrep 'disney|starwave' /etc/resolv.conf` ]]; then
 	source $HOME/.bash_chef;
 	source $HOME/.aws;
 	source $HOME/.work;
