@@ -159,6 +159,35 @@ function slashtodot() {
 	echo $1 | sed 's/\//\./g'
 }
 
+function spork() {
+	knife spork $@
+}
+
+function cwd() {
+	echo "${PWD##*/}"
+}
+
+function cookprepr() {
+	PATCH='patch'
+	semver=${2:-$PATCH}
+	# spork bump $cwd $semver && \
+	# knife cookbook metadata from file metadata.rb && \
+	# berks update && \
+	# git status
+	# echo "Next create your PR and get it merged."
+	# echo "When that's done, run \`cookpostpr\`"
+}
+
+function cookpostpr() {
+	# fetchupstream && \
+	# berks upload && \
+	# stove && \
+	# git push upstream master --tags && \
+	# echo "Now run \`berks apply {chef_environment}\`"
+}
+
+
+
 ### BS FUNCTIONS
 snow() {
 	clear;while :;do echo $LINES $COLUMNS $(($RANDOM%$COLUMNS));sleep 0.1;done|gawk '{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH*\033[0;0H",a[x],x;}}'
