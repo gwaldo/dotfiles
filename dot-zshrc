@@ -264,6 +264,8 @@ alias forkandclone=''
 alias b2d='boot2docker $@;'
 alias bdup='boot2docker up && eval "$(boot2docker shellinit)";'
 alias whileloop='echo "while true; do sleep 2 && echo \"GO\!\" && dosomething; done"'
+alias notdiff="echo are you looking for \'comm\'\?"
+alias diffvs='notdiff'
 
 ### TYPO ALIASES
 alias cleawr='clear'
