@@ -81,7 +81,9 @@ export EDITOR='vim'
 if [[ `egrep 'disney|starwave' /etc/resolv.conf` ]]; then
 	source $HOME/.work;
 	source $HOME/.bash_chef;
-	source $HOME/.aws/config;
+	#noglob source $HOME/.aws/credentials;
+	#noglob source $HOME/.aws/config;
+	#source /usr/local/bin/aws_zsh_completer.sh
 	source $HOME/.dockerrc;
 	alias spork='knife spork $@'
 	alias block='knife block $@'
