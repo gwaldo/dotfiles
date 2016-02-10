@@ -188,6 +188,10 @@ function cookpostpr() {
 	# echo "Now run \`berks apply {chef_environment}\`"
 }
 
+function yamltojson() {
+	echo "python -c 'import sys, yaml, json; json.dump(yaml.load(sys.stdin), sys.stdout, indent=4)' < file.yaml > file.json"
+}
+
 
 
 ### BS FUNCTIONS
