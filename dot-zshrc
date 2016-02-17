@@ -237,6 +237,16 @@ function rageflip() {
 	echo -n "";
 	echo -n "  (╯°□°）╯︵ ┻━┻  "; sleep .1;
 }
+function flip() {	# courtesy of Savant
+  echo;
+  echo -en "( º_º）  ┬─┬   \r"; sleep .2;
+  echo -en " ( º_º） ┬─┬   \r"; sleep .2;
+  echo -en "  ( ºДº）┬─┬   \r"; sleep .2;
+  echo -en "  (╯'Д'）╯︵⊏   \r"; sleep .1;
+  echo -en "  (╯'□'）╯︵ ⊏  \r"; sleep .1;
+  echo     "  (╯°□°）╯︵ ┻━┻"; sleep .1;
+  return 0
+}
 function ughprint() {
 	echo "Print is Dead: https://youtu.be/D3v_ogRaTf4?t=10s"
 	echo "Ugh, Hardcopy: https://www.youtube.com/watch?v=K3zkqjpQF8U"
