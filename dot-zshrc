@@ -225,17 +225,12 @@ csiyeah() { echo "(•_•) , ( •_•)>⌐■-■ , (⌐■_■)"; }
 shrug() { echo "¯\_(ツ)_/¯"; }
 function rageflip() {
 	echo;
-	echo -n "( º_º）  ┬─┬   "; sleep .2;
-	echo -n "";
-	echo -n " ( º_º） ┬─┬   "; sleep .2;
-	echo -n "";
-	echo -n "  ( ºДº）┬─┬   "; sleep .2;
-	echo -n "";
-	echo -n "  (╯'Д'）╯︵⊏   "; sleep .1;
-	echo -n "";
-	echo -n "  (╯'□'）╯︵ ⊏  "; sleep .1;
-	echo -n "";
-	echo -n "  (╯°□°）╯︵ ┻━┻  "; sleep .1;
+	echo -n "( º_º）  ┬─┬   \r"; sleep .4;
+	echo -n " ( º_º） ┬─┬   \r"; sleep .4;
+	echo -n "  ( ºДº）┬─┬   \r"; sleep .4;
+	echo -n "  (╯'Д'）╯︵⊏   \r"; sleep .3;
+	echo -n "  (╯'□'）╯︵ ⊏  \r"; sleep .3;
+	echo -n "  (╯°□°）╯︵ ┻━┻  "; sleep .3;
 }
 function flip() {	# courtesy of Savant
   echo;
