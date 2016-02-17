@@ -221,7 +221,11 @@ disco() {
 }
 fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
 monocle() { echo "ಠ_ರೃ\n"; }
-csiyeah() { echo "(•_•) , ( •_•)>⌐■-■ , (⌐■_■)"; }
+csiyeah() {
+  echo -en "(•_•)      \r"; sleep .4
+  echo -en "( •_•)>⌐■-■\r"; sleep .4
+  echo     "(⌐■_■)       "; sleep .4
+}
 shrug() { echo "¯\_(ツ)_/¯"; }
 function rageflip() {
 	echo;
