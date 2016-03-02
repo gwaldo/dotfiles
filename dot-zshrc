@@ -279,6 +279,10 @@ alias notdiff="echo are you looking for \'comm\'\? (for \"common\")"
 alias diffvs='notdiff'
 alias ipcalc='sipcalc'
 alias tf='terraform'
+alias k='kitchen $@'
+alias komodo='open -a "Komodo Edit 9"'
+alias eclipse='/Applications/Eclipse.app/Contents/MacOS/eclipse --clean $@'
+alias ec='eclipse'
 
 ### TYPO ALIASES
 alias cleawr='clear'
