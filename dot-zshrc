@@ -192,7 +192,21 @@ function yamltojson() {
 	echo "python -c 'import sys, yaml, json; json.dump(yaml.load(sys.stdin), sys.stdout, indent=4)' < file.yaml > file.json"
 }
 
-
+# function datediff(){
+# 	if [ -z "$1" ]
+#   	then
+#     echo "The end date needs to be provided in 'YYYY-mm-dd' format"  # Or no parameter passed.
+#  	else
+#   	echo "-Parameter #1 is \"$1\".-"
+#   fi
+# 	future=$(date -j -f "%Y-%m-%d" $1 "+%s")
+# 	now=$(date +%s)
+# 	datediff=($future - $now)
+#
+# function daystododrox(){
+# 	days=$(datediff(2016-04-21))
+# 	echo "$days days to DevOpsDays Denver"
+# }
 
 ### BS FUNCTIONS
 snow() {
