@@ -66,14 +66,33 @@ export PATH=$PATH:$GOBIN
 # Python envvars which should help Sphinx work
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-# Postgresql
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
-fi
 # Dropbox bin
 export PATH=$PATH:$HOME/Dropbox/bin
-
 export EDITOR='vim'
+
+
+### Mac Specifics
+if [[ "$OSTYPE" == "darwin"* ]]; then
+
+	export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
+	alias nap='pmset sleepnow'
+	alias komodo='open -a "Komodo Edit 9"'
+	alias eclipse='/Applications/Eclipse.app/Contents/MacOS/eclipse --clean $@'
+	alias ec='eclipse'
+
+	### Mac cursor commands for iTerm2; map ctrl+arrows or alt+arrows to fast-move
+	# for ctrl+arrows:
+	#"\e[1;5D": backward-word
+	#"\e[1;5C": forward-word
+	# for alt+arrows:
+	bindkey -e
+	bindkey '^[[1;9C' forward-word
+	bindkey '^[[1;9D' backward-word
+	bindkey '\e\e[D' backward-word
+	bindkey '\e\e[C' forward-word
+fi
+
 
 ### If Work...
 if [[ `egrep 'disney|starwave' /etc/resolv.conf` ]]; then
@@ -306,36 +325,20 @@ alias vstatus='vagrant status'
 alias vnuke='vagrant destroy -f'
 alias vcycle='vagrant destroy -f && vagrant up'
 alias updatethese='for i in `ls`; do echo "\n$i"; cd $i; git pull; cd ..; done'
-#alias fetchupstream='for i in `ls`; do echo "\n$i"; cd $i; git fetch upstream && git checkout master && git merge upstream/master && git push; cd ..; done'
+#alias fetchupstream= 'for i in `ls`; do echo "\n$i"; cd $i; git fetch upstream && git checkout master && git merge upstream/master && git push; cd ..; done'
 alias fetchupstream='git fetch upstream && git checkout master && git merge upstream/master && git push'
 alias forkandclone=''
-#alias bd='boot2docker $@;'
-alias b2d='boot2docker $@;'
-alias bdup='boot2docker up && eval "$(boot2docker shellinit)";'
 alias whileloop='echo "while true; do sleep 2 && echo \"GO\!\" && dosomething; done"'
 alias notdiff="echo are you looking for \'comm\'\? (for \"common\")"
 alias diffvs='notdiff'
 alias ipcalc='sipcalc'
 alias tf='terraform'
 alias k='kitchen $@'
-alias komodo='open -a "Komodo Edit 9"'
-alias eclipse='/Applications/Eclipse.app/Contents/MacOS/eclipse --clean $@'
-alias ec='eclipse'
+alias kitch='kitchen $@'
+
 
 ### TYPO ALIASES
 alias cleawr='clear'
-
-### Mac cursor commands for iTerm2; map ctrl+arrows or alt+arrows to fast-move
-# for ctrl+arrows:
-#"\e[1;5D": backward-word
-#"\e[1;5C": forward-word
-# for alt+arrows:
-bindkey -e
-bindkey '^[[1;9C' forward-word
-bindkey '^[[1;9D' backward-word
-bindkey '\e\e[D' backward-word
-bindkey '\e\e[C' forward-word
-
 
 # Report the execution time if it is longer than N seconds:
 REPORTTIME=1
