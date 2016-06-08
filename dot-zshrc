@@ -127,6 +127,7 @@ lint() {
 	else
 		target="."
 	fi
+	if
 	if [ `which rubocop` ]; then
 		echo "Running RuboCop";
 		rubocop $target;
@@ -136,6 +137,26 @@ lint() {
 	if [ `which foodcritic` ]; then
 		echo "\nRunning Foodcritic\n";
 		foodcritic $target;
+	else
+		echo "\nWARNING: FoodCritic is not installed\n";
+	fi
+}
+cheflint() {
+	if [ $1 ]; then
+		target=$1
+	else
+		target="."
+	fi
+	if
+	if [ `which rubocop` ]; then
+		echo "Running RuboCop";
+		chef exec rubocop $target;
+	else
+		echo "\nWARNING: RuboCop is not installed\n";
+	fi
+	if [ `which foodcritic` ]; then
+		echo "\nRunning Foodcritic\n";
+		chef exec foodcritic $target;
 	else
 		echo "\nWARNING: FoodCritic is not installed\n";
 	fi
