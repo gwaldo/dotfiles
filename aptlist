@@ -1,0 +1,11 @@
+build-essential
+apt-file
+htop
+zsh
+vim
+nmap
+curl
+wget
+netcat
+strace
+sysstat
