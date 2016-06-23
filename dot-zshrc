@@ -246,8 +246,13 @@ function yamltojson() {
 # 	echo "$days days to DevOpsDays Denver"
 # }
 
-#function lowercase() {}
-#function uppercase() {}
+function lowercase() {
+	echo $@ | tr '[:upper:]' '[:lower:]'	
+}
+
+function uppercase() {
+	echo $@ | tr '[:lower:]' '[:upper:]'
+}
 
 ### BS FUNCTIONS
 snow() {
