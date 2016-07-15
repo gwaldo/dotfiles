@@ -249,10 +249,14 @@ function yamltojson() {
 function lowercase() {
 	echo $@ | tr '[:upper:]' '[:lower:]'	
 }
+alias lower='lowercase'
+alias lcase='lowercase'
 
 function uppercase() {
 	echo $@ | tr '[:lower:]' '[:upper:]'
 }
+alias upper='uppercase'
+alias ucase='uppercase'
 
 ### BS FUNCTIONS
 snow() {
