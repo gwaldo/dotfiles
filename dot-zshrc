@@ -258,6 +258,13 @@ function uppercase() {
 alias upper='uppercase'
 alias ucase='uppercase'
 
+function 8601zulu() {
+	echo $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+}
+function 8601local() {
+	echo $(date +%FT%T%z)
+}
+
 ### BS FUNCTIONS
 snow() {
 	clear;while :;do echo $LINES $COLUMNS $(($RANDOM%$COLUMNS));sleep 0.1;done|gawk '{a[$3]=0;for(x in a) {o=a[x];a[x]=a[x]+1;printf "\033[%s;%sH ",o,x;printf "\033[%s;%sH*\033[0;0H",a[x],x;}}'
