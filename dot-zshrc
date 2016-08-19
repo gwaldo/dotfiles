@@ -247,7 +247,7 @@ function yamltojson() {
 # }
 
 function lowercase() {
-	echo $@ | tr '[:upper:]' '[:lower:]'	
+	echo $@ | tr '[:upper:]' '[:lower:]'
 }
 alias lower='lowercase'
 alias lcase='lowercase'
@@ -332,6 +332,12 @@ function heartthrob(){
   echo "< 3"
   echo "<3"
   echo ""
+}
+function annoyatron() {
+	dd if=/dev/urandom bs=7 count=100 | base64 | say -v "Trinoids"
+}
+function grieg() {
+	say -v Cello "do do do do do do do do do do do do do do do do do do do do do do do do do do"
 }
 function ughprint() {
 	echo "Print is Dead: https://youtu.be/D3v_ogRaTf4?t=10s"
