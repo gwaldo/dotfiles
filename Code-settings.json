@@ -1,0 +1,8 @@
+// Place your settings in this file to overwrite the default settings in MS Code
+// Goes in $HOME/Library/Application Support/Code/User/settings.json
+// Stored in dotfiles/Code-settings.json
+
+{
+    "editor.rulers": [ 80, 100 ],
+    "editor.wrappingColumn": 100
+}
