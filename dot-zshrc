@@ -97,7 +97,7 @@ fi
 ### If Work...
 if [[ `egrep 'disney|starwave' /etc/resolv.conf` ]]; then
 	source $HOME/.work;
-	source $HOME/.bash_chef;
+	#source $HOME/.bash_chef;
 	#noglob source $HOME/.aws/credentials;
 	#noglob source $HOME/.aws/config;
 	#source /usr/local/bin/aws_zsh_completer.sh
