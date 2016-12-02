@@ -48,12 +48,18 @@ function mkcd {
 
 function sudo {
 	# from https://stapp.space/sudo-under-windows/
-	$file, [string]$arguments = $args;
-	$psi = new-object System.Diagnostics.ProcessStartInfo $file;
-	$psi.Arguments = $arguments;
-	$psi.Verb = "runas";
-	$psi.WorkingDirectory = get-location;
-	[System.Diagnostics.Process]::Start($psi);
+	# and https://stapp.space/run-last-command-in-elevated-powershell/
+	if($args[0] -eq '!!') {
+		damnit;
+	}
+	else {
+		$file, [string]$arguments = $args;
+		$psi = new-object System.Diagnostics.ProcessStartInfo $file;
+		$psi.Arguments = $arguments;
+		$psi.Verb = "runas";
+		$psi.WorkingDirectory = get-location;
+		[System.Diagnostics.Process]::Start($psi);
+	}
 }
 
 function damnit {
