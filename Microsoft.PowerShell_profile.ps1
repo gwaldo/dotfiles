@@ -55,3 +55,10 @@ function sudo {
 	$psi.WorkingDirectory = get-location;
 	[System.Diagnostics.Process]::Start($psi);
 }
+
+function damnit {
+	# from https://stapp.space/run-last-command-in-elevated-powershell/
+	$cmd - (Get-History ((Get-History).Count))[0].CommandLine
+	Write-Host "Running $cmd in $PWD elevated"
+	sudo powershell -NoExit -Command "pushd '$PWD'; Write-host 'cmd to run: $cmd'; $cmd"
+}
