@@ -68,3 +68,5 @@ function damnit {
 	Write-Host "Running $cmd in $PWD elevated"
 	sudo powershell -NoExit -Command "pushd '$PWD'; Write-host 'cmd to run: $cmd'; $cmd"
 }
+
+Set-Alias fuck 'damnit'
