@@ -60,7 +60,7 @@ export PATH=$PATH:/usr/local/share/python3
 # Adding a Ruby & gems to PATH
 export PATH=$PATH:/usr/local/opt/ruby/bin
 # Adding Go's $GOPATH/bin to PATH
-export GOPATH=$HOME/Dropbox/Code/gocode
+export GOPATH=$HOME/Dropbox/code/gocode
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 # Python envvars which should help Sphinx work
@@ -364,6 +364,10 @@ function fixit() {
 }
 function rip_psx(){
 	echo 'dd if=/dev/disk4 of="./Disk Title disk2.img" bs=2048; say done'
+}
+function backup_music(){
+	cd /Volumes/Music
+	rsync -avz --progress ~/Music/ .
 }
 
 ### ALIASES
