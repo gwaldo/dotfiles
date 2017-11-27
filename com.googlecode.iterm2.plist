@@ -16,6 +16,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -88,8 +90,6 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Dropbox/Code/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -109,7 +109,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAc7AAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -125,63 +125,12 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>3969 110 445 103 1920 0 2560 1417 </string>
-	<key>NSWindow Frame Preferences</key>
-	<string>2850 155 924 485 1920 0 2560 1417 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>5473 1288 400 129 4480 0 2560 1417 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>726 648 620 392 0 0 2048 1257 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>2189 139 606 456 1920 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1963 258 796 473 1920 150 1680 1027 </string>
+	<string>269 122 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1930 551 697 626 1920 150 1680 1027 </string>
+	<string>26 659 682 518 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2070 32 697 626 2048 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 10</key>
-	<string>2902 579 697 624 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 11</key>
-	<string>1940 8 697 624 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 12</key>
-	<string>4484 553 2377 864 4480 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 13</key>
-	<string>2618 726 697 624 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 14</key>
-	<string>2097 781 697 624 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 15</key>
-	<string>1920 953 851 464 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 16</key>
-	<string>2618 793 697 624 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 17</key>
-	<string>1972 131 697 976 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 18</key>
-	<string>1936 132 697 624 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 19</key>
-	<string>2848 144 697 624 1920 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>3041 126 697 626 2048 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 3</key>
-	<string>2048 0 1278 1417 2048 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 4</key>
-	<string>2114 27 697 850 2048 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 5</key>
-	<string>2828 30 697 626 2048 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 6</key>
-	<string>2101 791 697 626 2048 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 7</key>
-	<string>4619 4 697 626 4608 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 8</key>
-	<string>2084 791 697 626 2048 0 2560 1417 </string>
-	<key>NSWindow Frame iTerm Window 9</key>
-	<string>3328 0 1278 1417 2048 0 2560 1417 </string>
+	<string>1138 641 682 518 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -910,28 +859,12 @@
 			<string>/Users/grunh003</string>
 		</dict>
 	</array>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
-	<true/>
-	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
-	<integer>0</integer>
-	<key>NoSyncHaveShownPromoWithId_4</key>
-	<true/>
-	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>AFB3CDAA-2CE3-4ECD-AEF3-A29BB1A5D1D9</string>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
-	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>1</integer>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<string>F8E6000F-5E81-4FBC-B5BF-419C428FF96A</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>491143282.00338</real>
-	<key>NoSyncTimeOfLastPromo</key>
-	<real>478033056.56455398</real>
-	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>490539137.95852</real>
+	<real>532115546.75119102</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -986,7 +919,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/grunh003/Dropbox/Code/dotfiles</string>
+	<string>/Users/waldo/Dropbox/Code/dotfiles</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -998,15 +931,15 @@
 	<key>RightOption</key>
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=23</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=0</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
-	<key>SULastCheckTime</key>
-	<date>2017-11-01T16:18:57Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -61761,6 +61694,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.10</string>
+	<string>3.1.5</string>
 </dict>
 </plist>
