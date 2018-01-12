@@ -233,6 +233,12 @@ function yamltojson() {
 	echo "python -c 'import sys, yaml, json; json.dump(yaml.load(sys.stdin), sys.stdout, indent=4)' < file.yaml > file.json"
 }
 
+function mp4_to_gif() {
+	filein=$1
+	fileout=$2 || "$1.gif"
+	ffmpeg -i  $filein -f gif $fileout
+}
+
 # function datediff(){
 # 	if [ -z "$1" ]
 #   	then
