@@ -190,6 +190,11 @@ tunnel() {
 	echo "# Connections to tcp localhost:9909 will be made to 192.168.1.1:80 via SSH tunnel to home"
 }
 
+# Where is a function defined?
+whichfunc() {
+	type -a $1
+}
+
 # Useful for converting between Graphite metrics and file paths
 function dottoslash() {
 	echo $1 | sed 's/\./\//g'
