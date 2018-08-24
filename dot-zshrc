@@ -191,6 +191,7 @@ tunnel() {
 
 # Where is a function defined?
 whichfunc() {
+	whence -v $1
 	type -a $1
 }
 
