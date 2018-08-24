@@ -70,7 +70,6 @@ export LANG=en_US.UTF-8
 export PATH=$PATH:$HOME/Dropbox/bin
 export EDITOR='vim'
 
-
 ### Mac Specifics
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
