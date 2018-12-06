@@ -407,7 +407,8 @@ alias notdiff="echo are you looking for \'comm\'\? (for \"common\")"
 alias diffvs='notdiff'
 alias ipcalc='sipcalc'
 alias tf='terraform'
-alias k='kitchen $@'
+alias k='kubectl $@'
+# alias k='kitchen $@'
 alias kitch='kitchen $@'
 
 
