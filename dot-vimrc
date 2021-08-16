@@ -7,6 +7,7 @@ syntax on
 set ruler
 set autoindent smartindent
 set smarttab
+set wrap linebreak
 
 " Highlight things that we find with the search
 set hlsearch
