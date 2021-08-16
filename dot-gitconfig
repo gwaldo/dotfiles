@@ -25,3 +25,5 @@
 [user]
 	name = Waldo G
 	email = gwaldo@gmail.com
+[core]
+	sharedRepository = group
