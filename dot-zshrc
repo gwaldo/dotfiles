@@ -56,13 +56,14 @@ source $ZSH/oh-my-zsh.sh
 ### PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Adding ipython3 & friends to PATH
-export PATH=$PATH:/usr/local/share/python3
+export PATH=/usr/local/opt/python@3.8/bin:$PATH
 # Adding a Ruby & gems to PATH
 export PATH=$PATH:/usr/local/opt/ruby/bin
 # Adding Go's $GOPATH/bin to PATH
 export GOPATH=$HOME/Dropbox/code/gocode
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
+export PATH=$PATH:/usr/local/lib/ruby/gems/2.6.0/bin
 # Python envvars which should help Sphinx work
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -194,6 +195,11 @@ whichfunc() {
 	whence -v $1
 	type -a $1
 }
+
+bio() {
+	cat $HOME/GoogleDrive/Presentations/_bio.txt
+}
+
 
 # Useful for converting between Graphite metrics and file paths
 function dottoslash() {
