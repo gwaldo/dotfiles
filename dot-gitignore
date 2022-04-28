@@ -3,7 +3,7 @@
 # then run `git config --global core.excludesfile ~/.gitignore`
 
 # Mac finder positional file
-.DS_Store
+**.DS_Store
 
 # vim temp files
 *~
