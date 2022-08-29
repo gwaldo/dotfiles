@@ -250,6 +250,10 @@ function mp4_to_gif() {
 	ffmpeg -i  $filein -f gif $fileout
 }
 
+function cleanlink() {
+	curl -ILs -w %{url_effective} $1
+}
+
 # function datediff(){
 # 	if [ -z "$1" ]
 #   	then
