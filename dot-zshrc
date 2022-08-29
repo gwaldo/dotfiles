@@ -420,7 +420,7 @@ alias tf='terraform'
 alias k='kubectl $@'
 # alias k='kitchen $@'
 alias kitch='kitchen $@'
-
+alias linkme='cleanlink $@'
 
 ### TYPO ALIASES
 alias cleawr='clear'
