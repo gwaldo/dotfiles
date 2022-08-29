@@ -27,3 +27,4 @@
 	email = gwaldo@gmail.com
 [core]
 	sharedRepository = group
+	hooksPath = /usr/local/dd/global_hooks
