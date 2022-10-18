@@ -402,6 +402,9 @@ function backup_music(){
 	cd /Volumes/Music
 	rsync -avz --progress ~/Music/ .
 }
+function best(){
+	echo "https://youtu.be/oomCIXGzsR0?t=39"
+}
 
 ### ALIASES
 alias bigdirs='du --max-depth=1 2> /dev/null | sort -n -r | head -n20'
@@ -430,6 +433,8 @@ alias k='kubectl $@'
 # alias k='kitchen $@'
 alias kitch='kitchen $@'
 alias linkme='cleanlink $@'
+alias urthebest='best'
+alias yourethebest='best'
 
 ### TYPO ALIASES
 alias cleawr='clear'
