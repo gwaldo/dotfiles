@@ -91,6 +91,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 	bindkey '^[[1;9D' backward-word
 	bindkey '\e\e[D' backward-word
 	bindkey '\e\e[C' forward-word
+
+	function brb() {
+		open -a Preview $HOME/GoogleDrive/Projects/BRB/brb.png
+	}
 fi
 
 
