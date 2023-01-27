@@ -255,16 +255,20 @@ function mp4_to_gif() {
 }
 
 function cleanlink() {
-	curl -ILs -w %{url_effective} $1
+	# First iteration
+	# curl -ILs -w %{url_effective} $1
+	# 
 	# Links to further parse output:
 	# https://stackoverflow.com/a/6174447/428779
 	# https://unix.stackexchange.com/a/325492/7078
 	# https://gist.github.com/joshisa/297b0bc1ec0dcdda0d1625029711fa24
 	# 
-	# Thoughts:
-	# From the path, split on directories, and grab the last segment.
-	# If the path contains ampersands ('&'), split on those.  Print each
-	# of them on a new line or colorize.
+
+	# Split on '?' and '&':
+	# link=$(curl -ILs -w %{url_effective} $1 | sed -E 's/&/\n\&/g;' | sed -E 's/\?/\n\?/g;')
+	# echo $link
+
+	curl -ILs -w %{url_effective} $1 | sed -E 's/&/\n\&/g;' | sed -E 's/\?/\n\?/g;'
 }
 
 # function datediff(){
