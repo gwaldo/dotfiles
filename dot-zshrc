@@ -56,20 +56,25 @@ source $ZSH/oh-my-zsh.sh
 
 ### PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# Adding ipython3 & friends to PATH
-export PATH=/usr/local/opt/python@3.8/bin:$PATH
-# Adding a Ruby & gems to PATH
-export PATH=$PATH:/usr/local/opt/ruby/bin
-# Adding Go's $GOPATH/bin to PATH
-export GOPATH=$HOME/Dropbox/code/gocode
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
-export PATH=$PATH:/usr/local/lib/ruby/gems/2.6.0/bin
-# Python envvars which should help Sphinx work
+## Adding ipython3 & friends to PATH
+#export PATH=/usr/local/opt/python@3.8/bin:$PATH
+## Adding a Ruby & gems to PATH
+#export PATH=$PATH:/usr/local/opt/ruby/bin
+
+## Adding Go's $GOPATH/bin to PATH
+#export GOPATH=$HOME/Dropbox/code/gocode
+#export GOBIN=$GOPATH/bin
+#export PATH=$PATH:$GOBIN
+#export PATH=$PATH:/usr/local/lib/ruby/gems/2.6.0/bin
+
+## Python envvars which should help Sphinx work
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
 # Dropbox bin
-export PATH=$PATH:$HOME/Dropbox/bin
+#export PATH=$PATH:$HOME/Dropbox/bin
+
+## Vim
 export EDITOR='vim'
 
 ### Mac Specifics
@@ -100,31 +105,36 @@ fi
 
 
 ### If Work...
-# if [[ `egrep 'disney|starwave' /etc/resolv.conf` ]]; then
-# 	source $HOME/.work;
-#
-# 	alias spork='knife spork $@'
-# 	alias block='knife block $@'
-# fi
+if [[ `egrep 'disney|starwave' /etc/resolv.conf` ]]; then
+	source $HOME/.work;
+	# alias spork='knife spork $@'
+	# alias block='knife block $@'
+fi
 
 ### WORK
-source $HOME/.work
+# source $HOME/.work
+
 
 ### FUNCTIONS
+
 # # mkcd = create a directory and `cd` into it
 mkcd() { mkdir -p "$@" && cd "$_"; }
+
 # # chefsum = do a sha256 checksum on a file. So named because sha256 checksums is what Chef uses.
-chefsum() { openssl dgst -sha256 "$@"; }
+#chefsum() { openssl dgst -sha256 "$@"; }
+
 function fuck() {
 	if killall -9 "$2"; then
 		echo ; echo " (╯°□°）╯︵$(echo "$2"|toilet -f term -F rotate)"; echo
 	fi
 }
+
 function iloop()
 {
 # Make this a function
 #	#while sleep 2; do echo && echo thinking; echo ; done
 }
+
 lint() {
 	if [ $1 ]; then
 		target=$1
@@ -145,6 +155,7 @@ lint() {
 		echo "\nWARNING: FoodCritic is not installed\n";
 	fi
 }
+
 cheflint() {
 	if [ $1 ]; then
 		target=$1
@@ -165,35 +176,41 @@ cheflint() {
 		echo "\nWARNING: FoodCritic is not installed\n";
 	fi
 }
-function bd() {
-	boot2docker $*
-	#[[ "$1" == "up" ]] && eval "$(boot2docker shellinit)"
-	if [[ "$1" == "up" ]]; then
-		eval "$(boot2docker shellinit)";
-	fi
-}
-dockerip() {
-	boot2docker ip 2> /dev/null;
-}
-function subl () {
-	#TODO: wrap in OS detection
-    if [ -d /Applications/Sublime\ Text\ 2.app ]
-    then
-        /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl $@
-		else
-			echo "Sublime Text doesn't seem to be installed"
-    fi
-}
+
+# function bd() {
+# 	boot2docker $*
+# 	#[[ "$1" == "up" ]] && eval "$(boot2docker shellinit)"
+# 	if [[ "$1" == "up" ]]; then
+# 		eval "$(boot2docker shellinit)";
+# 	fi
+# }
+
+# dockerip() {
+# 	boot2docker ip 2> /dev/null;
+# }
+
+# function subl () {
+# 	#TODO: wrap in OS detection
+#    if [ -d /Applications/Sublime\ Text\ 2.app ]
+#     then
+#         /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl $@
+# 		else
+# 			echo "Sublime Text doesn't seem to be installed"
+#     fi
+# }
+
 editlaunchers() {
 	subl ~/Dropbox/Code/Launchers;
 }
+
 editdotfiles() {
 	subl ~/Dropbox/Code/dotfiles;
 }
-tunnel() {
-	echo "ssh -L 9909:192.168.1.1:80 home"
-	echo "# Connections to tcp localhost:9909 will be made to 192.168.1.1:80 via SSH tunnel to home"
-}
+
+# tunnel() {
+# 	echo "ssh -L 9909:192.168.1.1:80 home"
+# 	echo "# Connections to tcp localhost:9909 will be made to 192.168.1.1:80 via SSH tunnel to home"
+# }
 
 # Where is a function defined?
 whichfunc() {
