@@ -63,6 +63,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 
+# Dropbox bin to PATH
+if [ -d $HOME/Dropbox/bin ]; then
+	export PATH=$PATH:$HOME/Dropbox/bin
+fi
+
 ## Docker in PATH, if Docker's installed
 if [ -d $HOME/.docker/bin ]; then
 	export PATH=$PATH:/$HOME/.docker/bin
@@ -82,9 +87,6 @@ fi
 ## Python envvars which should help Sphinx work
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# Dropbox bin
-#export PATH=$PATH:$HOME/Dropbox/bin
 
 ## Vim
 export EDITOR='vim'
