@@ -59,6 +59,14 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 ## Homebrew, at front of PATH
 export PATH=/opt/homebrew/bin:$PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+
+## Docker in PATH, if Docker's installed
+if [ -d $HOME/.docker/bin ]; then
+	export PATH=$PATH:/$HOME/.docker/bin
+fi
 
 ## Adding ipython3 & friends to PATH
 #export PATH=/usr/local/opt/python@3.8/bin:$PATH
