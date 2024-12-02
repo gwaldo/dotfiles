@@ -272,9 +272,10 @@ function cookpostpr() {
 	# echo "Now run \`berks apply {chef_environment}\`"
 }
 
-function yamllint() {
-	for i in $(find . -name '*.yml' -o -name '*.yaml'); do echo $i; ruby -e "require 'yaml';YAML.load_file(\"$i\")"; done
-}
+## Deprecating in favor of CLI tool
+# function yamllint() {
+# 	for i in $(find . -name '*.yml' -o -name '*.yaml'); do echo $i; ruby -e "require 'yaml';YAML.load_file(\"$i\")"; done
+# }
 
 function yamltojson() {
 	echo "python -c 'import sys, yaml, json; json.dump(yaml.load(sys.stdin), sys.stdout, indent=4)' < file.yaml > file.json"
