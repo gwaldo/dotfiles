@@ -247,8 +247,15 @@ bio() {
 function dottoslash() {
 	echo $1 | sed 's/\./\//g'
 }
+
 function slashtodot() {
 	echo $1 | sed 's/\//\./g'
+}
+
+# Kubernetes / k8s
+
+function konfig() {
+	kubectl config $@
 }
 
 # # Deprecated 20250117
@@ -387,14 +394,18 @@ disco() {
 	echo "<)   )>"
 	echo " /    \ "
 }
+
 fliptable() { echo "（╯°□°）╯ ┻━┻"; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
 monocle() { echo "ಠ_ರೃ\n"; }
+
 csiyeah() { echo "(•_•) , ( •_•)>⌐■-■ , (⌐■_■)"; }
+
 csiyeah-ani() {
   echo -en "(•_•)      \r"; sleep .4
   echo -en "( •_•)>⌐■-■\r"; sleep .4
   echo     "(⌐■_■)       "; sleep .4
 }
+
 shrug() { echo "¯\_(ツ)_/¯"; }
 function rageflip() {
 	echo;
@@ -405,6 +416,7 @@ function rageflip() {
 	echo -n "  (╯'□'）╯︵ ⊏  \r"; sleep .3;
 	echo -n "  (╯°□°）╯︵ ┻━┻  "; sleep .3;
 }
+
 function flip() {	# courtesy of Savant
   echo;
   echo -en "( º_º）  ┬─┬   \r"; sleep .2;
@@ -415,6 +427,7 @@ function flip() {	# courtesy of Savant
   echo     "  (╯°□°）╯︵ ┻━┻"; sleep .1;
   return 0
 }
+
 function heartthrob(){
   echo ""
   echo "<  3"
@@ -430,29 +443,37 @@ function heartthrob(){
   echo "<3"
   echo ""
 }
+
 function annoyatron() {
 	dd if=/dev/urandom bs=7 count=100 | base64 | say -v "Trinoids"
 }
+
 function grieg() {
 	say -v Cello "do do do do do do do do do do do do do do do do do do do do do do do do do do"
 }
+
 function ughprint() {
 	echo "Print is Dead: https://youtu.be/D3v_ogRaTf4?t=10s"
 	echo "Ugh, Hardcopy: https://www.youtube.com/watch?v=K3zkqjpQF8U"
 }
+
 function status() {
 	echo "http://imgs.xkcd.com/comics/success.png"
 }
+
 function fixit() {
 	echo "https://www.youtube.com/watch?v=1Isjgc0oX0s"
 }
+
 function rip_psx(){
 	echo 'dd if=/dev/disk4 of="./Disk Title disk2.img" bs=2048; say "psx rip done"'
 }
+
 function backup_music(){
 	cd /Volumes/Music
 	rsync -avz --progress ~/Music/ .
 }
+
 function best(){
 	echo "https://youtu.be/oomCIXGzsR0?t=39"
 }
@@ -488,9 +509,14 @@ alias k='kubectl $@'
 alias linkme='cleanlink $@'
 alias urthebest='best'
 alias yourethebest='best'
+alias yamllint='yamllint -d "{extends: default, rules: {line-length: disable}}" $@'
+alias jsonlint='jq empty $@'
 
 ### TYPO ALIASES
 alias cleawr='clear'
+alias gloud='gcloud'
+alias gcp='gcloud'
+alias heml='helm'
 
 # Report the execution time if it is longer than N seconds:
 REPORTTIME=1
@@ -506,3 +532,9 @@ preexec() {
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/harold.grunenwald.-nd/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/harold.grunenwald.-nd/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/harold.grunenwald.-nd/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/harold.grunenwald.-nd/bin/google-cloud-sdk/completion.zsh.inc'; fi
