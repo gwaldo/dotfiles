@@ -258,6 +258,28 @@ function konfig() {
 	kubectl config $@
 }
 
+# function kontext (){
+#	case
+#		-h
+#			echo "verbs are:\n \
+#					\tuse \
+#					\tcurrent \
+#					\tlist/get\n"
+#			exit 0
+#		use
+#			verb="use-context"
+#		current
+#			verb="curent-context"
+#		list
+#			verb="get-contexts"
+#		get
+#			verb="get-contexts"
+#		default
+#			verb="get-contexts"
+#
+#	kubectl config $verb
+# }
+
 # # Deprecated 20250117
 # function spork() {
 # 	knife spork $@
