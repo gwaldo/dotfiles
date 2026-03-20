@@ -259,6 +259,12 @@ function konfig() {
 }
 
 # function kontext (){
+#	if [ -z "$1" ]
+#  	then
+#    	echo "No argument supplied"
+#		kontext -h
+#	fi
+#
 #	case
 #		-h
 #			echo "verbs are:\n \
