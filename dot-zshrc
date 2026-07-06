@@ -303,6 +303,7 @@ function kontext() {
 			;;
 		use|set)
 			kubectl config use-context $2
+			;;
 		*)
 			echo "usage: kontext <current|get|list|use|set>"
 			return 1
