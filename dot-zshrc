@@ -288,6 +288,28 @@ function konfig() {
 #	kubectl config $verb
 # }
 
+function kontext() {
+	if [ "$#" -ne 1 ]; then
+		echo "usage: kontext <current|get|list>"
+		return 1
+	fi
+
+	case "$1" in
+		current)
+			kubectl config current-context
+			;;
+		get|list)
+			kubectl config get-contexts
+			;;
+		use|set)
+			kubectl config use-context $2
+		*)
+			echo "usage: kontext <current|get|list|use|set>"
+			return 1
+			;;
+	esac
+}
+
 # # Deprecated 20250117
 # function spork() {
 # 	knife spork $@
