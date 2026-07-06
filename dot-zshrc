@@ -290,7 +290,7 @@ function konfig() {
 
 function kontext() {
 	if [ "$#" -ne 1 ]; then
-		echo "usage: kontext <current|get|list>"
+		echo "usage: kontext <current|get|list|use|set>"
 		return 1
 	fi
 
