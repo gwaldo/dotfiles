@@ -564,6 +564,9 @@ alias urthebest='best'
 alias yourethebest='best'
 alias yamllint='yamllint -d "{extends: default, rules: {line-length: disable}}" $@'
 alias jsonlint='jq empty $@'
+alias youtube-dl='yt-dlp $@'
+alias yt-dl='yt-dlp $@'
+alias ytdl='yt-dlp $@'
 
 ### TYPO ALIASES
 alias cleawr='clear'
