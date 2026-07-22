@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 #export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
 ### PATH
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 ## Homebrew, at front of PATH
 export PATH=/opt/homebrew/bin:$PATH
